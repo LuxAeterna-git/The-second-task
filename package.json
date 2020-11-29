@@ -1,0 +1,31 @@
+{
+  "name": "the-2nd-task",
+  "version": "1.0.0",
+  "description": "the second task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "Vladimir Glushakov <yep.yep1@yandex.ru>",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.3.1",
+    "node-sass": "^5.0.0",
+    "pug": "^3.0.0",
+    "pug-loader": "^2.4.0",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.1.0",
+    "scss": "^0.2.4",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.8.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
