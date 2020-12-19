@@ -1,11 +1,11 @@
-
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-*{
-    color: red;
+body {
+  max-width: 1400px;
 }
+@import "./pug/includes/logo/logo.scss";
+@import "./pug/includes/header/header.scss";

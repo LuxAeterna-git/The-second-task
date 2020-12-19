@@ -12,7 +12,9 @@
   "author": "Vladimir Glushakov <yep.yep1@yandex.ru>",
   "license": "ISC",
   "devDependencies": {
+    "copy-webpack-plugin": "^7.0.0",
     "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
     "mini-css-extract-plugin": "^1.3.1",
     "node-sass": "^5.0.0",
@@ -27,6 +29,7 @@
     "webpack-cli": "^4.2.0"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "url-loader": "^4.1.1"
   }
 }
