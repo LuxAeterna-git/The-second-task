@@ -7,6 +7,16 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
+    publicPath: "",
+  },
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    port: 9000,
+    overlay: {
+      warnings: true,
+      errors: true,
+    },
   },
   plugins: [
     new HTMLWebpackPlagin({
@@ -29,13 +39,23 @@ module.exports = {
         use: [{ loader: MiniCssExtractPlugin.loader }, "css-loader"],
       },
       {
-        test: /\.scss$/,
+        test: /\.s[ac]ss$/i,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
           },
-          "css-loader",
-          "sass-loader",
+          {
+            loader: "css-loader",
+          },
+          {
+            loader: "resolve-url-loader",
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
       {
