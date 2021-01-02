@@ -9,14 +9,13 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     publicPath: "",
   },
+  mode: "development",
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    historyApiFallback: true,
+    contentBase: path.resolve(__dirname, "./dist"),
+    open: true,
     compress: true,
-    port: 9000,
-    overlay: {
-      warnings: true,
-      errors: true,
-    },
+    port: 8080,
   },
   plugins: [
     new HTMLWebpackPlagin({
@@ -28,6 +27,7 @@ module.exports = {
       filename: "[name].css",
     }),
   ],
+
   module: {
     rules: [
       {
@@ -59,12 +59,20 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpeg)$/,
-        use: ["file-loader"],
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
       {
-        test: /\.(ttf|woff|woff2|eot)$/,
-        use: ["file-loader"],
+        test: /\.(ttf|woff|woff2|eot|svg)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "./fonts",
+            },
+          },
+        ],
       },
     ],
   },

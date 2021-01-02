@@ -1,0 +1,5 @@
+mixin button(text, disabled = false)
+  - let classes = ['button']
+  if disabled
+    - classes.push('button_disabled')
+  button(class=classes)= text

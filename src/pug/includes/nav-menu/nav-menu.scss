@@ -1,0 +1,20 @@
+@import "../../../scss/colors.scss";
+.menu__list {
+  display: flex;
+  list-style: none;
+}
+.menu__list-item + .menu__list-item {
+  margin-left: 20px;
+}
+.menu__list-item {
+  a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 17px;
+    color: $dark-shade-50;
+  }
+  a:hover {
+    color: $dark-shade-75;
+    font-weight: bold;
+  }
+}

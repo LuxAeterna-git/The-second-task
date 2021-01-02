@@ -1,17 +1,15 @@
+include ../button/button.pug
+
 block header
    header.header
-      .container
          .header__inner
-            a.logo(href="#"): img.logo__img(src="#", alt="logo")
-            nav.menu
-               ul.menu__list
-                  li.menu__list-item: a(href="#") О нас
-                  li.menu__list-item: a(href="#") Услуги
-                  li.menu__list-item: a(href="#") Вакансии
-                  li.menu__list-item: a(href="#") Новости
-                  li.menu__list-item: a(href="#") Соглашения
+            include ../logo/logo.pug
+            include ../nav-menu/nav-menu.pug
             .user-nav
-               button.user-nav__link(type=button) ВОЙТИ
-               button.user-nav__link(type=button) ЗАРЕГИСТРИРОВАТЬСЯ
-            .test
+               +button('ВОЙТИ')
+               +button('ЗАРЕГИСТРИРОВАТЬСЯ')
+            
+               
+            
+               
    
