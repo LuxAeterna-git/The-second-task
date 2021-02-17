@@ -1,20 +1,23 @@
 @import "../../../scss/colors.scss";
 
 .button {
+  outline: none;
   color: $purple;
   padding: 0 20px;
   background-color: transparent;
   height: 34px;
   text-align: center;
-  border-radius: 22px;
-  border-color: $purple;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
+  border: 2px solid $purple;
+  border-radius: 22px;
 }
 .button:hover {
   color: #ffffff;
   background-image: $gradient;
+  border: none;
+  margin: 0 2px;
 }
 .button_disabled {
   opacity: 0.5;

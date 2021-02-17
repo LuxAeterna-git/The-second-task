@@ -1,14 +1,24 @@
 include ../button/button.pug
 
-block header
-   header.header
-         .header__inner
-            include ../logo/logo.pug
-            include ../nav-menu/nav-menu.pug
-            .user-nav
-               +button('ВОЙТИ')
-               +button('ЗАРЕГИСТРИРОВАТЬСЯ')
-            
+mixin header(isLogged, name)
+   block header
+      header.header
+            .header__inner
+               .header__logo
+                  include ../logo/logo.pug
+               .header__nav
+                  .header__menu
+                     include ../nav-menu/nav-menu.pug
+                  if isLogged
+                     .header__user
+                        .header__name= name
+                  else
+                     .header__buttons
+                        .header__button
+                           +button('ВОЙТИ')
+                        .header__button
+                           +button('ЗАРЕГИСТРИРОВАТЬСЯ')
+               
                
             
                

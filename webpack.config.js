@@ -63,7 +63,7 @@ module.exports = {
         type: "asset/resource",
       },
       {
-        test: /\.(ttf|woff|woff2|eot|svg)$/,
+        test: /\.(ttf|woff|woff2|eot)$/,
         use: [
           {
             loader: "file-loader",
