@@ -1,11 +1,13 @@
+include ./pug/includes/text-field/text-field.pug
+
 doctype html
 html(lang='en')
   head
     title Toxin
   body
-  include ./pug/includes/header/header.pug
-  +header(true, 'Юлий Цезарь')
-  include ./pug/includes/footer/footer.pug
+    +text-field(text, "Email",false,true)
+    
+    
     
     
 

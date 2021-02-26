@@ -1,0 +1,23 @@
+@import "../../../scss/colors.scss";
+
+.text-field {
+  outline: none;
+  color: $dark-shade-25;
+  border: 1px solid $dark-shade-25;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  width: 320px;
+  height: 44px;
+  padding: 13px 15px 13px 15px;
+  box-sizing: border-box;
+  &:hover,
+  &:focus {
+    border-color: $dark-shade-50;
+    color: $dark-shade-75;
+  }
+}
+
+.text-field_focused {
+  border-color: $dark-shade-50;
+  color: $dark-shade-75;
+}
